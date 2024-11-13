@@ -1,4 +1,5 @@
-﻿using MassTransit;
+﻿using EstudoRBMQ.Bus;
+using MassTransit;
 
 namespace EstudoRBMQ.Extensions
 {
@@ -8,6 +9,7 @@ namespace EstudoRBMQ.Extensions
         {
             services.AddMassTransit(busConfigurator =>
             {
+                busConfigurator.AddConsumer<RelatorioSolicitadoEventConsumer>();
                 busConfigurator.UsingRabbitMq((ctx, cfg) =>
                 {
                     cfg.Host(new Uri("amqp://localhost:5672"), host =>

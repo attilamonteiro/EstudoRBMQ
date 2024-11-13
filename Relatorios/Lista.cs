@@ -2,9 +2,9 @@
 {
     internal static class Lista
     {
-        public static List<SoliitacaoRelatorio> Relatorios = new(); 
+        public static List<SolicitacaoRelatorio> Relatorios = new(); 
     }
-    public class SoliitacaoRelatorio
+    public class SolicitacaoRelatorio
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }
